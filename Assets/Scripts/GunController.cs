@@ -29,21 +29,22 @@ public class GunController : MonoBehaviour
     void FixedUpdate()
     {
         verticalInput = Input.GetAxis("Vertical");
+       
 
-        if (socket.eulerAngles.z <= 35.2f || socket.eulerAngles.z >= 344.8f)
-        {
-            socket.Rotate(Vector3.forward * verticalInput);
+        if (socket.localEulerAngles.x <= 5.2f || socket.localEulerAngles.x >= 349.8f)
+         {
+            socket.Rotate(Vector3.left * verticalInput);
         }
-        else if (socket.eulerAngles.z > 35.0f && socket.eulerAngles.z < 40.0f)
-        {
-            socket.eulerAngles = new Vector3(socket.eulerAngles.x, socket.eulerAngles.y, 35.0f);
-        }
-        else if (socket.eulerAngles.z < 345.0f && socket.eulerAngles.z > 340.0f)
-        {
-            socket.eulerAngles = new Vector3(socket.eulerAngles.x, socket.eulerAngles.y, 345.0f);
-        }
+         else if (socket.localEulerAngles.x > 5.0f && socket.localEulerAngles.x < 40.0f)
+         {
+            socket.localEulerAngles = new Vector3(5.0f, socket.localEulerAngles.y, socket.localEulerAngles.z);
+         }
+         else if (socket.localEulerAngles.x < 350.0f && socket.localEulerAngles.x > 340.0f)
+         {
+             socket.localEulerAngles = new Vector3(350.0f , socket.localEulerAngles.y, socket.localEulerAngles.z);
+         }
 
 
-            //Debug.Log(socket.eulerAngles);
+        Debug.Log(socket.localEulerAngles.x + " ,  " + socket.localEulerAngles.y+ " ,  "+socket.localEulerAngles.z);
     }
 }

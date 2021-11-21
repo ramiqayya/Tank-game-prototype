@@ -12,7 +12,7 @@ public class TurretControls : MonoBehaviour
     void FixedUpdate()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up * horizontalInput);
+        transform.Rotate(Vector3.forward * horizontalInput);
 
     }
 }

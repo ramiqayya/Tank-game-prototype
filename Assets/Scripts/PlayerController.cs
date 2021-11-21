@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            transform.Translate(Vector3.right * speed*Time.deltaTime);
+            transform.Translate(Vector3.forward * speed*Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.Q))
         {
-            transform.Translate(Vector3.left * speed* Time.deltaTime);
+            transform.Translate(Vector3.back * speed* Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.C))

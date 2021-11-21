@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
         if (distance > 40)
             transform.Translate((player.transform.position - transform.position).normalized * enemySpeed * Time.deltaTime);
 
-        Debug.Log("Distance:  " + distance);
+      //  Debug.Log("Distance:  " + distance);
 
     }
 
